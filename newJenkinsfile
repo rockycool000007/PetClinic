@@ -8,8 +8,9 @@ pipeline {
     stages{
         stage('Checkout'){
             steps{
-                /* git 'https://github.com/rockycool000007/simple-java-maven-app.git' */
-                git 'https://github.com/rockycool000007/JenkinsWar.git'
+                /* git 'https://github.com/rockycool000007/simple-java-maven-app.git'
+                git 'https://github.com/rockycool000007/JenkinsWar.git' */
+                git 'https://github.com/rockycool000007/PetClinic.git'
             }
         }
         
