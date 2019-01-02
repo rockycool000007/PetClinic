@@ -16,13 +16,14 @@ pipeline {
         
         stage('Build') {
             steps{
+                sh 'mvn -version'
                 sh 'mvn package'
             }
         }
         
         stage('Deploy') {
             steps {
-                sh "sshpass -p 'root' scp -o StrictHostKeyChecking=no target/*.jar root@35.237.163.169:/opt/"
+                sh "sshpass -p 'root' scp -o StrictHostKeyChecking=no target/*.war root@35.237.163.169:/opt/"
             }
         }
     }
